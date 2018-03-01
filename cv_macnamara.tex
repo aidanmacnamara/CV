@@ -1,0 +1,247 @@
+%%---------------------------------------------------------------------------%
+%
+% Notes:
+%
+% * Don't forget to change `pdfauthor' and `keywords' in the \hypersetup
+%   section below.
+%
+% * To create a new page use: \newpage \opening
+%
+% * res.cls includes an \address{} command which can be used up to twice,
+%   but my address is too long for the format it uses.
+%
+% * Alternate documentclass statement to put headings in margin:
+%   \documentclass[margin,line,11pt,final]{res}
+%
+% * Can divide publication/presentation list into subsections by year:
+%   \section{\bf\small\hspace{8mm}2006}
+%
+%%----------------------------------------------------------------------------%
+\documentclass[overlapped, line, 11pt, letterpaper]{res}
+%\documentclass[margin,line,12pt,letterpaper]{res}
+%\textheight = 46\baselineskip
+\newcommand{\comment}[2][]{{\bf #1}}
+\newcommand{\superscript}[1]{\ensuremath{^\textrm{\scriptsize #1}} }
+
+%\newcommand{\th}[0]{\superscript{th}}
+\newcommand{\st}[0]{\superscript{st}}
+\newcommand{\nd}[0]{\superscript{nd}}
+\newcommand{\rd}[0]{\superscript{rd}}
+\renewenvironment{itemize}{
+\begin{list}{$\bullet$}
+% inform the list command to use this counter
+{\setlength{\itemsep}{0cm}}
+}{\end{list}}
+
+
+%\usepackage{res_yy}
+\usepackage{ifpdf}
+\usepackage{amssymb}
+\usepackage{txfonts}
+\ifpdf
+	\usepackage[pdftex]{hyperref}
+\else
+	\usepackage[hypertex]{hyperref}
+\fi
+
+\hypersetup{
+  letterpaper,
+  colorlinks,
+  urlcolor=black,
+  pdfpagemode=none,
+  pdftitle={Curriculum Vitae},
+  pdfauthor={Aidam MacNamara},
+  %pdfcreator={$ $Id: cv-us.tex,v 1.28 2006/12/12 22:53:52 jrblevin Exp $ $},
+  pdfsubject={Curriculum Vitae},
+  pdfkeywords={}
+}
+
+%%===========================================================================%%
+
+\begin{document}
+
+%---------------------------------------------------------------------------
+% Document Specific Customizations
+
+% Make lists without bullets and with no indentation
+\setlength{\leftmargini}{1em}
+\renewcommand{\labelitemi}{$\bullet$}
+%\setlength{\leftmarginii}{1em}
+%\renewcommand{\labelitemii}{--}
+
+
+% Use large bold font for printed name at top of pages
+\renewcommand{\namefont}{\large\textbf}
+
+%---------------------------------------------------------------------------
+
+\name{Aidan MacNamara}
+%\address{The Mill House Wing\\Streetly End, West Wickham\\Cambridgeshire CB21 4RP\\}
+\begin{resume}
+
+\begin{ncolumn}{2}
+  3 Park Lane		& Phone:+44 (0) 1799 585 001\\
+  Castle Camps	& {\small \tt aidan.macnamara@gmail.com} \\
+  Cambridgeshire		& Nationality: Irish \\
+  CB21 4SS	& Date of Birth: 28/07/1980
+\end{ncolumn}
+
+%---------------------------------------------------------------------------
+
+\section{\bf Summary}
+
+Having gained a diverse experience in statistics and computational modeling through my PhD and post-doctoral positions, I now apply network and modeling approaches to target identification and validation in drug discovery. My goal is to establish such approaches as an integral component of drug discovery and demonstrate significant and successful results of their use. 
+
+%---------------------------------------------------------------------------
+
+\section{\bf Work Experience}
+\begin{formatb}
+\title{l} \dates{r}\\
+\location{l}\\
+\body \\
+\end{formatb}
+
+\title{\it Computational Biologist} \dates{Jan 2015 -- present}
+\location{GSK, Stevenage}
+\begin{position}
+As a computational biologist within the Target Sciences group of GSK, I apply network and modeling approaches to diverse data types (genomic, transcriptomic and proteomic) to better understand potential drug targets. I also lead the analysis of a number of collaborative projects with academia as part of the Open Targets initiative \emph{(https://www.opentargets.org/)}. 
+\end{position}
+
+\title{\it Postdoctoral Fellow in Systems Biology} \dates{Nov 2010 -- Dec 2014}
+\location{EMBL-EBI, Cambridge}
+\begin{position}
+I held a postdoctoral fellow position in the group of Julio Saez-Rodriguez (Systems Biomedicine). My research concentrated on using single-cell data and computational modeling to better understand the role of signal deregulation in disease. This includes the analysis and modeling of mass cytometry, fluorescent microscopy, proteomic and gene expression data types.
+\end{position}
+
+\section{\bf Education}
+\begin{formatb}
+\title{l} \dates{r}\\
+\location{l}\\
+\body \\
+\end{formatb}
+
+\title{\it PhD in Immunology} \dates{Oct 2006 -- Sep 2010}
+\location{Imperial College, London}
+\begin{position}
+The determination of the basis of HLA class-I protection in HTLV-I infection. Using theoretical methods to understand the immune response to the retrovirus HTLV-I, I gained insight into how the host genotype protects against diseases associated with this virus. Funded by the Wellcome Trust and supervised by Dr. B. Asquith and Prof. C. Bangham.
+\end{position}
+
+\emph{MSc in Bioinformatics} \hfill Oct 2005 -- Sep 2006\\
+Imperial College, London
+ 
+\emph{BA (2:1) in Zoology} \hfill Oct 1998 -- Jun 2002\\
+Trinity College, Dublin
+
+\section{Publications}
+%\setlength{\leftmargini}{0em}
+%\renewcommand{\labelitemi}{}
+\textbf{\emph{First Author}}
+\begin{itemize}
+\item A single-cell model of PIP3 dynamics using chemical dimerization. MacNamara A, Stein F, Feng S, Schultz C, and Saez-Rodriguez J. \emph{Bioorganic \& Medicinal Chemistry}, 23(12), 2868-2876, 2015.
+\item Modeling signaling networks with different formalisms: a preview. MacNamara A, Henriques D and Saez-Rodriguez J. \emph{Methods in Molecular Biology}, 1021, 89–105, 2013.
+\item State-time spectrum of signal transduction logic models. MacNamara A, Terfve CDA, Henriques D, Pen\~alver Bernab\'e B and Saez-Rodriguez J. \emph{Physical Biology}, 9, 4, 45003, 2012.
+\item HLA class I binding of HBZ determines outcome in HTLV-1 infection. MacNamara A, Rowan AG, Hilburn S, Kadolsky U, Fujiwara H, Suemori K, Yasukawa M, Taylor GP, Bangham CRM and Asquith B. \emph{PLoS pathogens}, 4, 9, e1001117, 2010.
+\item The avidity and lytic efficiency of the CTL response to HTLV-I. Kattan T*, MacNamara A*, Rowan AG, Nose H, Mosley AJ, Tanaka Y, Taylor GP, Asquith B and Bangham CRM. \emph{The Journal of Immunology}, 182, 5723-5729, 2009.
+\item T-cell epitope prediction: rescaling can mask biological variation between MHC molecules. MacNamara A, Kadolsky U, Bangham CRM and Asquith B. \emph{PLoS Computational Biology}, 5, e1000327, 2009.
+\end{itemize}
+
+\textbf{\emph{Others}}
+\begin{itemize}
+\item Modeling Signaling Networks to Advance New Cancer Therapies. Saez-Rodriguez J, MacNamara A and Cook S. \emph{Annual Review of Biomedical Engineering}, 17, 143-163, 2015.
+\item A rapidly reversible chemical dimerizer system. Feng S, Laketa V, Stein F, Rutkowska A, MacNamara A, Depner, S, Klingm\"uller U, Saez-Rodriguez J and Schultz C. \emph{Angewandte Chemie}, 2014.
+\item PIP3 Induces the Recycling of Receptor Tyrosine Kinases. Laketa V, Zarbakhsh S, Traynor-Kaplan A, MacNamara A, Subramanian D, Putyrski M, Mueller R, Nadler A, Mentel M, Saez-Rodriguez J, Pepperkok R, and Schultz C. \emph{Science Signaling}, 7 (308), 2014.
+\item Frequency and function of KIR+ CD8+ T cells in HTLV-1 infection. Twigger K, Rowan A, Seich al Basatena N, MacNamara A, Retiere C, Gould K, Taylor GP, Asquith B and Bangham CRM. \emph{Retrovirology}, 11, 79, 2014.
+\item MEIGO: an open-source software suite based on metaheuristics for global optimization in systems biology and bioinformatics. Egea JA, Henriques D, Cokelear T, Villaverde AF, MacNamara A, Danciu P, Banga JR and Saez-Rodriguez J. \emph{BMC Bioinformatics}, 15(1), p.136, 2014.
+\item In contrast to HIV, KIR3DS1 does not influence outcome in HTLV-1 retroviral infection. O'Connor GM, Seich Al Basatena N, Olavarria V, MacNamara A, Vine A, Ying Q, Hisada M, Galv\~ao-Castro B, Asquith B and McVicar DW. \emph{Human Immunology}, 2012.
+\item CellNOptR: a flexible toolkit to train protein signaling networks to data using multiple logic formalisms. Terfve CDA, Cokelear T, Henriques D, MacNamara A, Gon\c{c}alves E, Morris, MK, Van Iersel M, Lauffenburger DA and Saez-Rodriguez J. \emph{BMC Systems Biology}, 6, 133, 2012.
+\item An IFN-$\gamma$ ELISPOT assay with two CTL epitopes derived from HTLV-1 Tax region 161-233 discriminates HAM/TSP patients from asymptomatic HTLV-1 carriers in a Peruvian population. Best \emph{et al.}, (3\textsuperscript{rd} author). \emph{AIDS research and human retroviruses}, 2011.
+\item KIR2DL2 enhances protective and detrimental HLA class I-mediated immunity in chronic viral infection. Seich al Basatena \emph{et al.}, (2\textsuperscript{nd} author). \emph{PLoS Pathogens}, 7, 10, e1002270, 2011.
+\item In vivo expression of human T-lymphotropic virus type 1 basic leucine-zipper protein generates specific CD8+ and CD4+ T-lymphocyte responses that correlate with clinical outcome. Hilburn S, Rowan AG, Demontis M, MacNamata A, Asquith B, Bangham CRM and Taylor GP. \emph{Journal of Infectious Diseases} 203, 4, 529, 2011.
+\end{itemize}
+
+\textbf{\emph{Software}}
+\begin{itemize}
+\item CNORdt - \emph{www.bioconductor.org/packages/release/bioc/html/CNORdt.html}. This is a method to train dynamic Boolean logic models to data.
+\item CellNOpt - \emph{www.cellnopt.org}. A suite of methods to which I have significantly contributed that train logic models to data.
+\item MEIGOR - \emph{www.iim.csic.es/~gingproc/meigo.html}. A toolbox that performs parameter estimation. I contributed a Bayesian inference method to this project.
+\end{itemize}
+
+\section{\bf Teaching}
+\textbf{\emph{Advisor}}
+\begin{itemize}
+\item I have supervised multiple Masters/internship research projects from the Universities of Cambridge and Warwick. 
+\end{itemize}
+\textbf{\emph{Lecturing}}
+\begin{itemize}
+\item I have lectured at the FEBS/Wellcome Trust Practical Course ``In Silico Systems Biology'', EMBL-EBI, UK (2011-2013).
+\item I designed and taught a 1-day course (``Modeling of Network Signaling'') at EMBL-Heidelberg 2014.
+\end{itemize}
+
+\section{\bf Additional Experience}
+\begin{formatb}
+\title{l} \dates{r}\\
+\employer{l}\\
+\body\\
+\end{formatb}
+
+\title{\it A Study of Cichlid Speciation} \dates{Jun 2003 -- Sep 2003}
+\employer{Tropical Biology Association, Uganda}
+\begin{position}
+A research course in fieldwork and analysis. The completed project characterized ecological variance between two populations of haplochromine cichlids.
+\end{position}
+
+\title{\it WIDECAST Turtle Conservation Project} \dates{Jan 2004 -- Jun 2004}
+\employer{St. Eustatius, Netherlands Antilles}
+\begin{position}
+A volunteer project to manage depleted sea turtle populations in the Caribbean region. This position also included marine surveying and nature trail construction.
+\end{position}
+
+\title{\it Data Analyst} \dates{Sep 2004 -- August 2005}
+\employer{Siemens Ltd., Dublin}
+
+%\section{Conferences}
+%\begin{itemize}
+%\item Something else here Something else here Something else here Something else here Something else here
+%\item International conference on the Systems Biology of Human Diseases. Heidelberg, Germany, June 2013.
+%\item International conference on human retrovirology: HTLV and related retroviruses. Salvador, Brazil. Jul 2009.
+%\item Web-based presentation of the paper, ``T-cell epitope prediction: rescaling can mask biological variation between MHC molecules'' - http://www.scivee.tv/node/10738.
+%\end{itemize}
+
+\section{Awards}
+The Wellcome Trust 4-year scholarship in bioinformatics. \\
+The EMBL EIPOD fellowship.
+
+\section{Skills}
+\textbf{\emph{Computational}}
+\begin{itemize}
+\item \emph{Experienced in:} R/S-PLUS, Python, Perl, C++, MySQL, Copasi 
+\item \emph{Good knowledge of:} Java, GIMP, MATLAB, \LaTeX, PHP/HTML, Office 
+\end{itemize}
+
+%{\it Communication}
+%\begin{itemize}
+%\item Completion of the 3-day Wellcome Trust residential course in presentation and communication. 
+%\end{itemize}
+
+\textbf{\emph{Languages}} \\
+French, German, Gaeilge
+
+\section{References}
+\begin{ncolumn}{2}
+Dr. Becca Asquith	& Dr. Julio Saez-Rodriguez \\
+PhD Supervisor & Group Leader \\
+Department of Immunology & Systems Biomedicine \\
+Imperial College & EMBL-EBI \\
+{\small \tt b.asquith@imperial.ac.uk} & {\small \tt saezrodriguez@ebi.ac.uk} \\
+Phone: +44 (0) 2075 943 731 & Phone: +44 (0) 1223 494 564 \\
+\end{ncolumn}
+
+
+
+
+\end{resume}
+
+\end{document}
+
+%%===========================================================================%%
+
